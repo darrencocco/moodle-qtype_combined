@@ -48,3 +48,27 @@ body#page-question-type-combined div[id^=fgroup_id_subqnumeric][id*=answergroup]
     font-size: 1em;
 }
 
+.qtype_combined_essay_response.readonly {
+    background-color: white;
+}
+
+textarea.qtype_combined_essay_response {
+    width: 100%;
+}
+textarea.qtype_combined_essay_response.qtype_essay_plain {
+    white-space: pre-wrap;
+    font: inherit;
+}
+textarea.qtype_combined_essay_response.qtype_essay_monospaced {
+    white-space: pre;
+    font-family: Andale Mono, Monaco, Courier New, DejaVu Sans Mono, monospace;
+}
+.qtype_combined_essay_response {
+    min-height: 3em;
+}
+.qtype_combined_essay_response.readonly {
+    background-color: white;
+}
+div.qtype_combined_essay_response textarea {
+    width: 100%;
+}

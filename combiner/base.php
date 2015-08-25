@@ -272,7 +272,15 @@ abstract class qtype_combined_combiner_base {
         }
         return $keysadded;
     }
-
+    
+    /**
+     * Returns the sub question objects so that they can be iterated through
+     * is used to check for the preferredBehaviour property.
+     * @return multitype:qtype_combined_combinable_base
+     */
+    public function get_subqs() {
+        return $this->subqs;
+    }
 }
 
 /**

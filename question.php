@@ -205,4 +205,13 @@ class qtype_combined_question extends question_graded_automatically_with_countba
         }
         return $aggregatedresponses;
     }
+    
+    public function make_behaviour(question_attempt $qa, $preferredbehaviour) {
+        foreach($qa->get_question()->combiner->get_subqs() as $subq) {
+            if (isset($subq->preferredBehaviour) && $subq->preferredBehaviour === 'manual') {
+                return question_engine::make_behaviour('manualgraded', $qa, $preferredbehaviour);
+            }
+        }
+        return parent::make_behaviour($qa, $preferredbehaviour);
+    }
 }
